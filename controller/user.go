@@ -7,8 +7,20 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func UserController(c *gin.Context) {
+func GetUsers(c *gin.Context) {
 	users := []models.User{}
 	config.DB.Find(&users)
 	c.JSON(200, &users)
+}
+
+func CreateUser(c *gin.Context) {
+
+}
+
+func DeleteUser(c *gin.Context) {
+
+}
+
+func UpdateUser(c *gin.Context) {
+	
 }
